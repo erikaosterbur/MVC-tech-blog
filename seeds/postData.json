@@ -1,0 +1,14 @@
+[
+    {
+        "title": "HTML",
+        "body": "HTML is the skeleton of a website."
+    },
+    {
+        "title": "CSS",
+        "body": "CSS gives style to your website."
+    },
+    {
+        "title": "JavaScript",
+        "body": "JavaScript gives functionality to your website."
+    }
+]

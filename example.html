@@ -13,41 +13,46 @@
 
     <div class="jumbotron jumbotron-fluid" style="background-color: rgb(14, 68, 68);">
         <div class="container">
-            <h1 class="display-4" style="color: white">The Tech Blog</h1>
+            <h1 class="display-4 header" style="color: white">The Tech Blog</h1>
         </div>
         <div class="navbar">
             <ul class="nav">
                 <li class="nav-item">
-                    <a class="nav-link" style="color: white" href="/">Home</a>
+                    <a class="nav-link" style="color: white" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" style="color: white" href="/dashboard">Dashboard</a>
+                    <a class="nav-link" style="color: white" href="#">Dashboard</a>
                 </li>
-                {{#if logged_in}}
                 <li class="nav-item">
                     <a class="nav-link" style="color: white" href="#">Logout</a>
                 </li>
-                {{else}}
                 <li class="nav-item">
                     <a class="nav-link" style="color: white" href="#">Login</a>
                 </li>
-                {{/if}}
             </ul>
         </div>
     </div>
-    
+
 
 
     <main>
-        {{{body}}}
+
+        <div class="card col-10 p-4 m-auto">
+            <div class="card-body">
+              <h5 class="card-title">Post Title</h5>
+              <h6 class="card-subtitle">Post Author & Date</h6>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+
     </main>
 
 
 
 
-    {{#if logged_in}}
+  
     <script src="/js/logout.js"></script>
-    {{/if}}
+  
 
 </body>
 
