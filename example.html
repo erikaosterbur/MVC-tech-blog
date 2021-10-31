@@ -68,19 +68,38 @@
 
 
         <form class="col-10 p-4 m-auto">
-            <h4 class="form group col-5 m-auto">NEW POST</h4>
+            <h4 class="form group col-5 m-auto">CREATE NEW POST</h4>
             <div class="form-group">
                 <label for="postTitle">Title:</label>
                 <textarea class="form-control" id="new-post-title" rows="1"></textarea>
             </div>
             <div class="form-group">
-                <label for="postBody">New post:</label>
+                <label for="postBody">Content:</label>
                 <textarea class="form-control" id="new-post-body" rows="3"></textarea>
             </div>
             <div class="d-flex justify-content-center">
                 <button class="btn btn-dark col-4" id="new-post-form">Submit Post</button>
             </div>
-        </form>    
+        </form>   
+        
+        <div>
+            <form>
+                <div class="form-group col-10 p-4 m-auto">
+                    <label for="commentBody">Leave a comment</label>
+                    <textarea class="form-control" id="comment-body" rows="3"></textarea>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button class="btn btn-dark col-3" id="comment-form">Submit Comment</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="card col-10 p-4 m-auto" href="single-post">
+            <div class="card-body">
+                <h5 class="card-title">HTML</h5>
+                <h6 class="card-subtitle">10/31/2021</h6>
+            </div>
+        </div>
 
     </main>
 
