@@ -39,11 +39,8 @@ router.get('/login', (req, res) => {
 
   router.get('/dashboard', (req, res) => {
     if (req.session.logged_in) {
-      res.redirect('/dashboard');
-      return;
-    }
-  
-    res.render('dashboard');
+      res.render('dashboard');
+    } else res.redirect('/login');
   });
 
 

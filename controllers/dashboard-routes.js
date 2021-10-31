@@ -13,13 +13,18 @@ router.get('/', withAuth, async (req, res) => {
         
         res.render('all-posts-admin', {
             posts,
-            logged_in: req.session.logged_in
+            logged_in: req.session.logged_in,
+            layout: "dashboard"
         });
     } catch (err) {
         res.status(500).json(err);
         res.redirect("login");
     }
 });
+
+
+
+//edit post page route
 
 
 module.exports = router;
