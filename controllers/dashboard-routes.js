@@ -18,13 +18,30 @@ router.get('/', withAuth, async (req, res) => {
         });
     } catch (err) {
         res.status(500).json(err);
-        res.redirect("login");
     }
 });
 
+router.get('/new', withAuth, (req, res) => {
+    res.render('new-post', {
+        layout: 'dashboard'
+    });
+});
 
+router.get('/edit/:id', withAuth, async (req, res) => {
+    try {
+        const postData = await Post.findByPk(req.params.id, {
+        });
 
-//edit post page route
+        const post = postData.get({ plain: true });
+        
+        res.render('edit-post', {
+            layout: 'dashboard',
+            post
+        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+})
 
 
 module.exports = router;
