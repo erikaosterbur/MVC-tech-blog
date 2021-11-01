@@ -1,11 +1,7 @@
 {{#each posts as |post| }}
     <div class="card col-10 p-4 m-auto">
         <div class="card-body">
-            {{#if logged_in}}
             <a href="/api/posts/{{post.id}}"><h5 class="card-title">{{post.title}}</h5></a>
-            {{else}}
-            <h5 class="card-title">{{post.title}}</h5>
-            {{/if}}
             <h6 class="card-subtitle">Posted by {{user.username}} on {{format_date post.date_created}}</h6>
             <p class="card-text">{{post.body}}</p>
         </div>

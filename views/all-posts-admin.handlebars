@@ -1,7 +1,7 @@
 {{#each posts as |post| }}
-     <div class="card col-10 p-4 m-auto" href="/dashboard/edit/{{post.id}}">
+     <div class="card col-10 p-4 m-auto">
             <div class="card-body">
-                <h5 class="card-title">{{post.title}}</h5>
+                <a href="/dashboard/edit/{{post.id}}"><h5 class="card-title">{{post.title}}</h5></a>
                 <h6 class="card-subtitle">{{format_date post.date_created}}</h6>
             </div>
         </div>
