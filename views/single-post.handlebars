@@ -6,6 +6,18 @@
     </div>
 </div>
 
+{{#if ?}}
+<div class="card col-8 p-4 m-auto">
+    <div class="card-body">
+        {{#each post.Comments}}
+        <p class="card-text">{{user.username}}</p>
+        <p class="card-text">{{format_date comment.date_created}}</p>
+        <p class="card-text">{{comment.body}}</p>
+        {{/each}}
+    </div>
+</div>
+{{/if}}
+
 <div>
     <form id="comment-form">
         <div class="form-group col-10 p-4 m-auto">
