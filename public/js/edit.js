@@ -16,14 +16,14 @@ const delButtonHandler = async (event) => {
 const updateButtonHandler = async (event) => {
     event.preventDefault();
 
-    const post_id = document.querySelector('#edit-post-id').textContent;
-    const post_title = document.querySelector('#edited-title').value.trim();
-    const post_body = document.querySelector('#edited-body').value.trim();
+    const post_id = document.querySelector('#edit-post-id').value;
+    const title = document.querySelector('#edited-title').value.trim();
+    const body = document.querySelector('#edited-body').value.trim();
 
-    if (post_title && post_body) {
+    if (title && body) {
         const response = await fetch(`/api/posts/${post_id}`, {
             method: 'PUT',
-            body: JSON.stringify({post_title, post_body}),
+            body: JSON.stringify({title, body}),
             headers: {
                 'Content-Type': 'application/json',
             },
