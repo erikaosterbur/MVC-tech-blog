@@ -20,7 +20,6 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/posts/:id', async (req, res) => {
-  console.log("route hit")
   try {
       const postData = await Post.findByPk(req.params.id, {
           include: [
@@ -35,7 +34,6 @@ router.get('/posts/:id', async (req, res) => {
       });
       
       const post = postData.get({ plain: true });
-      console.log(post)
       res.render('single-post', {
         post,
         logged_in: req.session.logged_in,

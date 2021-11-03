@@ -20,7 +20,6 @@ const updateButtonHandler = async (event) => {
     const post_title = document.querySelector('#edited-title').value.trim();
     const post_body = document.querySelector('#edited-body').value.trim();
 
-
     if (post_title && post_body) {
         const response = await fetch(`/api/posts/${post_id}`, {
             method: 'PUT',
@@ -30,6 +29,8 @@ const updateButtonHandler = async (event) => {
             },
         });
 
+        console.log(response.body);
+
         if (response.ok) {
             document.location.replace('/dashboard');
         } else {
@@ -38,10 +39,12 @@ const updateButtonHandler = async (event) => {
     }
 }
 
+
+
 document
     .querySelector('#delete-post-form')
     .addEventListener('click', delButtonHandler);
 
 document
     .querySelector('#edit-post-form')
-    .addEventListener('click', updateButtonHandler);
+    .addEventListener('submit', updateButtonHandler);
