@@ -1,4 +1,4 @@
-# Homework 14: MVC Tech Blog
+# MVC Tech Blog
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
